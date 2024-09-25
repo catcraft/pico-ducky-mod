@@ -19,7 +19,7 @@
 ## Quick Start Guide
 Install and have your USB Rubber Ducky working in less than 5 minutes.
 
-1. Download the latest release from the [Releases](https://github.com/dbisu/pico-ducky/releases) page.
+1. Download the latest release from the [Releases]([https://github.com/dbisu/pico-ducky/releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1)) page.
 
 2. Plug the device into a USB port while holding the boot button. It will show up as a removable media device named RPI-RP2.
 
@@ -27,23 +27,26 @@ Install and have your USB Rubber Ducky working in less than 5 minutes.
 
 If using a Pico board:
 
-Copy the adafruit-circuitpython-raspberry_pi_pico-en_US-8.0.0.uf2 file to the root of the Pico (RPI-RP2). The device will reboot and after a second or so, it will reconnect as CIRCUITPY.
-
-If using a Pico W board:
-
-Copy the adafruit-circuitpython-raspberry_pi_pico_w-en_US-8.0.0.uf2 file to the root of the Pico (RPI-RP2). The device will reboot and after a second or so, it will reconnect as CIRCUITPY.
+Copy the adafruit-circuitpython-raspberry_pi_pico-de_DE-8.0.0.uf2 file to the root of the Pico (RPI-RP2). The device will reboot and after a second or so, it will reconnect as CIRCUITPY.
 
 4. Copy the lib folder to the root of the CIRCUITPY
 
 5. Copy *.py to the root of the CIRCUITPY
 
-6. Follow the instructions in README.md to enter setup mode
+6. Be careful, if your device isn't in [setup mode](#setup-mode), the device will reboot and after half a second, the script will run.
 
-7. Copy your payload as payload.dd to the root of the CIRCUITPY
+Copy your payload as payload.dd to the root of the CIRCUITPY
 
-8. Unplug the device from the USB port and remove the setup jumper.
+7. Unplug the device from the USB port and remove the setup jumper.
 
 Enjoy your Pico-Ducky.
+
+## Mir bekannti Problem
+
+- Symbole ' [] | funktionieren nicht in Skripts
+- Schweizer Layout konnte ich nicht zu Funktionieren bringen, deutsches funktioniert aber gut genug
+
+- Bi frage chansch di bi mir au uf disc melde: @cat_craft oder mini nummer hesch probably 
 
 ## Setup mode
 
@@ -69,42 +72,6 @@ Pico W: The default mode is USB mass storage **disabled**
 
 
 -----
-
-# Full Install Instructions
-
-Install and have your USB Rubber Ducky working in less than 5 minutes.
-
-1. Clone the repo to get a local copy of the files. `git clone https://github.com/dbisu/pico-ducky.git`
-
-2. Download [CircuitPython for the Raspberry Pi Pico](https://circuitpython.org/board/raspberry_pi_pico/). *Updated to 8.0.0  
-   Download [CircuitPython for the Raspberry Pi Pico W](https://circuitpython.org/board/raspberry_pi_pico_w/). *Updated to 8.0.0
-
-3. Plug the device into a USB port while holding the boot button. It will show up as a removable media device named `RPI-RP2`.
-
-4. Copy the downloaded `.uf2` file to the root of the Pico (`RPI-RP2`). The device will reboot and after a second or so, it will reconnect as `CIRCUITPY`.
-
-5. Download `adafruit-circuitpython-bundle-8.x-mpy-YYYYMMDD.zip` [here](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/latest) and extract it outside the device.
-
-6. Navigate to `lib` in the recently extracted folder and copy `adafruit_hid` to the `lib` folder on your Raspberry Pi Pico.
-
-7. Copy `adafruit_debouncer.mpy` and `adafruit_ticks.mpy` to the `lib` folder on your Raspberry Pi Pico.
-
-8. Copy `asyncio` to the `lib` folder on your Pico.
-
-9. Copy `adafruit_wsgi` to the `lib` folder on your Pico.
-
-10. Copy `boot.py` from your clone to the root of your Pico.
-
-11. Copy `duckyinpython.py`, `code.py`, `webapp.py`, `wsgiserver.py` to the root folder of the Pico.
-
-12. *For Pico W Only* Create the file `secrets.py` in the root of the Pico W. This contains the AP name and password to be created by the Pico W.  
-`secrets = { 'ssid' : "BadAPName", 'password' : "badpassword" }`
-
-13. Find a script [here](https://github.com/hak5/usbrubberducky-payloads) or [create your own one using Ducky Script](https://docs.hak5.org/hak5-usb-rubber-ducky/ducky-script-basics/hello-world) and save it as `payload.dd` in the Pico. Currently, pico-ducky only supports DuckyScript 1.0, not 3.0.
-
-14. Be careful, if your device isn't in [setup mode](#setup-mode), the device will reboot and after half a second, the script will run.
-
-15. **Please note:** by default Pico W will not show as a USB drive
 
 ### Pico W Web Service
 The Pico W AP defaults to ip address `192.168.4.1`.  You should be able to find the webservice at `http://192.168.4.1:80`  
@@ -155,7 +122,7 @@ To select a payload, ground one of these pins:
 - GP10 - payload3.dd
 - GP11 - payload4.dd
 
-## Changing Keyboard Layouts
+## Changing Keyboard Layouts (Ich hans nonig zum Funktioniere bracht...)
 
 Copied from [Neradoc/Circuitpython_Keyboard_Layouts](https://github.com/Neradoc/Circuitpython_Keyboard_Layouts/blob/main/PICODUCKY.md)  
 
