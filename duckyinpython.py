@@ -48,19 +48,32 @@ duckyCommands = {
 
 def convertLine(line):
     newline = []
-    for key in filter(None, line.split(" ")):
-        key = key.upper()
-        command_keycode = duckyCommands.get(key, None)
-        if command_keycode is not None:
-            newline.append(command_keycode)
-        elif hasattr(Keycode, key):
-            newline.append(getattr(Keycode, key))
+    # Split the line by space to handle individual keys
+    for key_group in filter(None, line.split(" ")):
+        # Check if the key group is a combo (e.g., "GUI R")
+        if "+" in key_group:
+            combo_keys = key_group.split("+")
+            for combo_key in combo_keys:
+                combo_key = combo_key.upper()
+                # Lookup each combo key
+                command_keycode = duckyCommands.get(combo_key, None)
+                if command_keycode is not None:
+                    newline.append(command_keycode)
+                else:
+                    print(f"Unknown key: <{combo_key}>")
         else:
-            print(f"Unknown key: <{key}>")
+            key = key_group.upper()
+            # Handle non-combo keys normally
+            command_keycode = duckyCommands.get(key, None)
+            if command_keycode is not None:
+                newline.append(command_keycode)
+            else:
+                print(f"Unknown key: <{key}>")
     return newline
 
+
 def runScriptLine(line):
-    typing_delay = 0.05  # Adjust this delay for key timing
+    typing_delay = 0.1  # Adjust this delay for key timing
     for k in line:
         kbd.press(k)
         time.sleep(typing_delay)
