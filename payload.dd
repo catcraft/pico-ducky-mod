@@ -1,6 +1,7 @@
-REM The next four lines open Notepad in Windows and type "Hello World!"
-GUI r
-STRING notepad
-ENTER
-DELAY 250
-STRING Hello World!
+REM The next lines will show a text box saying, you have been hacked
+GUI+D
+GUI+R
+delay 3500
+STRING mshta javascript:alert(String.fromCharCode(100,117,32,119,117,114,100,101,115,116,32,103,101,104,97,99,107,116));close()
+delay 1500
+Enter
