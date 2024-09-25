@@ -19,8 +19,8 @@ from adafruit_hid.keyboard import Keyboard
 
 # uncomment these lines for non-US keyboards
 # replace LANG with appropriate language
-from keyboard_layout_win_de import KeyboardLayout
-from keycode_win_de import Keycode
+from keyboard_layout_win_ch import KeyboardLayout
+from keycode_win_ch import Keycode
 
 duckyCommands = {
     'WINDOWS': Keycode.WINDOWS, 'GUI': Keycode.GUI,
