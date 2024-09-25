@@ -48,37 +48,35 @@ duckyCommands = {
 
 def convertLine(line):
     newline = []
-    # Split the line by space to handle individual keys
-    for key_group in filter(None, line.split(" ")):
-        # Check if the key group is a combo (e.g., "GUI R")
-        if "+" in key_group:
-            combo_keys = key_group.split("+")
-            for combo_key in combo_keys:
-                combo_key = combo_key.upper()
-                # Lookup each combo key
-                command_keycode = duckyCommands.get(combo_key, None)
-                if command_keycode is not None:
-                    newline.append(command_keycode)
-                else:
-                    print(f"Unknown key: <{combo_key}>")
-        else:
-            key = key_group.upper()
-            # Handle non-combo keys normally
+    # Handle combinations split by '+'
+    for combo in line.split(" "):  # split first by space for separate commands
+        keys = combo.split("+")     # split by "+" for key combinations
+        combo_keys = []
+        for key in keys:
+            key = key.upper()
             command_keycode = duckyCommands.get(key, None)
             if command_keycode is not None:
-                newline.append(command_keycode)
+                combo_keys.append(command_keycode)
+            elif hasattr(Keycode, key):
+                combo_keys.append(getattr(Keycode, key))
             else:
                 print(f"Unknown key: <{key}>")
+        newline.append(combo_keys)
     return newline
 
 
+
+
 def runScriptLine(line):
-    typing_delay = 0.1  # Adjust this delay for key timing
-    for k in line:
-        kbd.press(k)
+    typing_delay = 0.05  # Adjust this delay for key timing
+    for combo in line:
+        # Press all keys in the combo
+        for k in combo:
+            kbd.press(k)
         time.sleep(typing_delay)
-        kbd.release(k)
-    kbd.release_all()
+        kbd.release_all()
+    kbd.release_all()  # Ensure all keys are released after execution
+
 
 def sendString(line):
     layout.write(line)
