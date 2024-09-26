@@ -43,7 +43,8 @@ Enjoy your Pico-Ducky.
 
 ## Mir bekannti Problem
 
-- Eigentli keine, manchmal Tweaken die Raspis, dann muss man sie vlt neu aufsetzen wenn man pech hat
+- Raspberry Pico 1: Eigentli keine, manchmal Tweaken die Raspis, dann muss man sie vlt neu aufsetzen wenn man pech hat
+- Raspberry Pico 2: Ungetestete FW, funktionstest noch nicht gemacht
 
 - Bi frage chansch di bi mir au uf disc melde: @cat_craft oder mini nummer hesch probably 
 
