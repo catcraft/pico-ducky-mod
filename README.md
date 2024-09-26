@@ -21,10 +21,21 @@ Install and have your USB Rubber Ducky working in less than 5 minutes.
 
 1. Download the latest release from the [Releases]([https://github.com/dbisu/pico-ducky/releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1)) page (Die uf2 datei (Firmeware)).
 
-*Für Pico 1*
-adafruit-circuitpython-raspberry_pi_pico-de_DE-8.0.0.utf
-*Für Pico 2*
-FW_PICO_2.utf
+
+<br>
+
+**Für Pico 1**
+
+
+*adafruit-circuitpython-raspberry_pi_pico-de_DE-8.0.0.utf*
+
+
+**Für Pico 2**
+
+
+*FW_PICO_2.utf*
+
+<br>
 
 3. Plug the device into a USB port while holding the boot button. It will show up as a removable media device named RPI-RP2.
 
