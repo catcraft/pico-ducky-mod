@@ -19,7 +19,7 @@
 ## Quick Start Guide
 Install and have your USB Rubber Ducky working in less than 5 minutes.
 
-1. Download the latest release from the [Releases]([https://github.com/dbisu/pico-ducky/releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1)) page.
+1. Download the latest release from the [Releases]([https://github.com/dbisu/pico-ducky/releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1)) page (Die uf2 datei (Firmeware)).
 
 2. Plug the device into a USB port while holding the boot button. It will show up as a removable media device named RPI-RP2.
 
@@ -43,8 +43,7 @@ Enjoy your Pico-Ducky.
 
 ## Mir bekannti Problem
 
-- Symbole ' [] | funktionieren nicht in Skripts
-- Schweizer Layout konnte ich nicht zu Funktionieren bringen, deutsches funktioniert aber gut genug
+- Eigentli keine, manchmal Tweaken die Raspis, dann muss man sie vlt neu aufsetzen wenn man pech hat
 
 - Bi frage chansch di bi mir au uf disc melde: @cat_craft oder mini nummer hesch probably 
 
@@ -122,7 +121,7 @@ To select a payload, ground one of these pins:
 - GP10 - payload3.dd
 - GP11 - payload4.dd
 
-## Changing Keyboard Layouts (Ich hans nonig zum Funktioniere bracht...)
+## Changing Keyboard Layouts (Ich müst die aleitig no apasse, han aber grad kb (de weg unde funktioniert nid ganz))
 
 Copied from [Neradoc/Circuitpython_Keyboard_Layouts](https://github.com/Neradoc/Circuitpython_Keyboard_Layouts/blob/main/PICODUCKY.md)  
 
