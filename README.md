@@ -19,7 +19,7 @@
 ## Quick Start Guide
 Install and have your USB Rubber Ducky working in less than 5 minutes.
 
-1. Download the latest release from the [Releases]([https://github.com/dbisu/pico-ducky/releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1)) page (Die uf2 datei (Firmeware)).
+1. Download the latest release from the [Releases](https://github.com/catcraft/pico-ducky-mod/releases/tag/V1) page (Die uf2 datei (Firmeware)).
 
 
 <br>
