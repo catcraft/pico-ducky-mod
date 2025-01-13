@@ -1,3 +1,5 @@
+# This does not Work anymore, furthermore, the Original Repository now Supports the new Pico: https://github.com/dbisu/pico-ducky
+
 <h1 align="center">pico-ducky</h1>
 
 <div align="center">
